@@ -4,6 +4,7 @@
 Global rules
 ================================================================================
 */
+/* Lägg på lite marginal om skärmen är väldigt smal dvs. nära 860 pixlar      */
 html {
     margin: 2%;
 }
@@ -14,7 +15,7 @@ body {
 	font-size: 100%;         /* Startvärde                                    */
 }
 section, header, footer, nav, div[role=main] {
-    outline: 1px solid red;  /* Provesorisk                                   */
+    outline: 1px solid red;  /* Provisorisk                                   */
 }
 /*
 ================================================================================
@@ -64,7 +65,23 @@ Start page rules
 ================================================================================
 */
 
-/* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
+/* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8                    */
+/* Startsidan ska använda flex för sin layout                                 */
+.startpage {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+/* Vi ser till att <header> och <footer> alltid fyller sidans bredd           */
+.startpage header,
+.startpage footer {
+	flex: 0 0 100%;
+}
+/* Därefter låter vi våra fyra <section> lägga sig på rad efter varandra      */
+.startpage section {
+	flex: 0 0 22%;
+}
+
 .startpage h1 {
 	font-size: 500%; /* Massiv rubrik på startsidan                           */
 }
