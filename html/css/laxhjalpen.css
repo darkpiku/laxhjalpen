@@ -116,12 +116,25 @@ Start page rules
 .startpage h1 {
 	font-size: 500%; /* Massiv rubrik på startsidan                           */
 }
+
+.startpage .Logo {
+		width: 235px;
+		height: 198px;
+}
+
 .tagline {
 	font-size: 120%;
 	padding: 0.5em;
 	border-top: 3px double #00AF64;
 	border-bottom: 3px double #00AF64;
 	margin 1em 0;
+}
+
+.hwrap {
+	display: flex;           /* Gör divven till en flex container             */
+	flex-wrap: wrap;         /* Radbryt om det behövs                         */
+	align-items: center;     /* Lägg elementen centrerat vertikalt            */
+	justify-content: center; /* Och intill varandra centrerat                 */
 }
 /*
 ================================================================================
@@ -173,7 +186,7 @@ Adaptive design
 }
 @media (max-width: 750px) {
     .hwrap > a {
-        margin-right: 25px;
+        margin-right: 30px;
     }
     /* Lägg till regler enligt kapitel 15 */
 }
