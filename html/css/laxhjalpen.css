@@ -11,7 +11,9 @@ html {
 body {
     margin: auto;            /* Centrera sidan                                */
     max-width: 860px;        /*                                               */
-	font-family: sans-serif; /*                                               */
+	/* Ändrad rad - radbruten av utrymmesskäl                                 */
+	font-family: "Helvetica Neue",
+	             "Liberation Sans", Calibri, Arial, sans-serif;
 	font-size: 100%;         /* Startvärde                                    */
 }
 section, header, footer, nav, div[role=main] {
@@ -20,6 +22,10 @@ section, header, footer, nav, div[role=main] {
 
 h1 {
 	font-family: "Merienda One", cursive;
+}
+
+h1::first-letter {
+	color: #00AF64;
 }
 /*
 ================================================================================
