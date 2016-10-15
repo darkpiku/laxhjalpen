@@ -30,7 +30,21 @@ h1::first-letter {
 ================================================================================
 */
 
-/* dborder ska vara här - avsnitt 11.7 */
+.dborder {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+article {
+	padding-bottom: 1em; /* sista p elementet ska ha 1 em luft i botten       */
+	margin-bottom: 2em; 
+	border-bottom: 3px double #00AF64;
+}
+
+article:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
 
 /*
 ================================================================================
@@ -175,6 +189,11 @@ nav {
 	min-width: 146px;
 	margin-right: 10px;
 	outline: 1px solid; /* Temporär för att se layouten när vi kodar */
+}
+
+.subpage .hwrap > h1,
+div[role=main] {
+	flex: 1 1 300px;
 }
 /*
 ================================================================================
