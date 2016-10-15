@@ -114,7 +114,7 @@ Regler för startsidan
 	font-size: 500%; /* Massiv rubrik på startsidan                           */
 }
 
-.startpage .Logo {
+.startpage .logo { /* Måste felanmäla till it-pastorn .Logo går icke */
 		width: 235px;
 		height: 198px;
 }
@@ -139,8 +139,18 @@ Andra regler för undersidor
 ================================================================================
 */
 
-/* TODO Avsnitt 11.4.1, 11.6,  */
+.subpage .logo { /* Måste felmeddela IT-pastorn,  han skrev .Logoi och det gack icke */
+	width: 146px;
+	height: 123px;
+}
 
+.subpage h1 {
+	font-size: 2.6rem;
+}
+
+h1 > span {
+	color: #a62f00;
+}
 /*
 ================================================================================
 Regler för tabeller
