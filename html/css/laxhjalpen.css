@@ -16,11 +16,7 @@ body {
 	             "Liberation Sans", Calibri, Arial, sans-serif;
 	font-size: 100%;         /* Startvärde                                    */
 }
-/* Kommenterar bort alla röda ramlinjer
-section, header, footer, nav, div[role=main] {
-    outline: 1px solid red;  /* Provisorisk                                   */
-}
-*/
+
 h1 {
 	font-family: "Merienda One", cursive;
 }
