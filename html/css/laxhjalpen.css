@@ -59,6 +59,7 @@ Huvudsajt - navigering
 
 /* Alla regler för .menu med relaterade element */
 /* TODO Avsnitt 5.2, 5.4, 5.5, 5.6, 11.4.2 */
+.menu > li,
 .menu > h2 {
 	margin: 0 0 1em;
 	padding: 2em 0;
@@ -87,6 +88,16 @@ Huvudsajt - navigering
 	color: #FF4900;
 }
 
+.menu {
+	margin: 1em 0;
+	padding: 0;
+}
+
+.startpage > section > h2, 
+.menu li {
+	margin 0 0 1rem;
+	list-style: none;
+}
 /*
 ================================================================================
 Regler för startsidan
