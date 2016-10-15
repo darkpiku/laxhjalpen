@@ -162,6 +162,20 @@ Andra regler för undersidor
 h1 > span {
 	color: #a62f00;
 }
+
+/* Logotype ska vara längs till vänster och rubrik längst till höger          */
+.subpage .hwrap {
+	justify-content: space-between;
+}
+
+/* Undersidans navigeringsfält                                                */
+.subpage .hwrap > a,
+nav {
+	flex: 0 1 20%;
+	min-width: 146px;
+	margin-right: 10px;
+	outline: 1px solid; /* Temporär för att se layouten när vi kodar */
+}
 /*
 ================================================================================
 Regler för tabeller
