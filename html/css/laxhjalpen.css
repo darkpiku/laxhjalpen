@@ -46,6 +46,28 @@ article:last-child {
 	margin-bottom: 0;
 }
 
+article p {
+	margin-left: 140px;
+	hypens: auto;
+}
+
+figure {
+	float: left; /* Bilden till vänster om texten                             */
+	margin: 0;   /* Nollställ webbläsarens inbyggda stil                      */
+}
+
+figure img {
+	width: 128px;
+	height: 128px;
+}
+
+figcaption {
+	font: italic bolder 110% sans-serif;
+	font-family: inherit; /* Restore after shorthand */
+	text-align: center;
+	text-transform: uppercase;
+	color: #666;
+}
 /*
 ================================================================================
 Regler för sidhuvudet
@@ -112,6 +134,7 @@ Huvudsajt - navigering
 	margin 0 0 1rem;
 	list-style: none;
 }
+
 /*
 ================================================================================
 Regler för startsidan
@@ -164,7 +187,7 @@ Andra regler för undersidor
 ================================================================================
 */
 
-.subpage .logo { /* Måste felmeddela IT-pastorn,  han skrev .Logoi och det gack icke */
+.subpage .logo { /* Måste felmeddela IT-pastorn,  han skrev .Logo och det gack icke */
 	width: 146px;
 	height: 123px;
 }
