@@ -48,7 +48,7 @@ article:last-child {
 
 article p {
 	margin-left: 140px;
-	hypens: auto;
+	hyphens: auto;
 }
 
 figure {
@@ -131,7 +131,7 @@ Huvudsajt - navigering
 
 .startpage > section > h2, 
 .menu li {
-	margin 0 0 1rem;
+	margin: 0 0 1rem;
 	list-style: none;
 }
 
@@ -168,11 +168,11 @@ Regler för startsidan
 }
 
 .tagline {
-	font-size: 120%;
-	padding: 0.5em;
-	border-top: 3px double #00AF64;
-	border-bottom: 3px double #00AF64;
-	margin 1em 0;
+    font-size: 120%;
+    padding: 0.5em;
+    border-top: 3px double #00AF64;
+    border-bottom: 3px double #00AF64;
+    margin: 1em 0;
 }
 
 .hwrap {
@@ -211,7 +211,7 @@ nav {
 	flex: 0 1 20%;
 	min-width: 146px;
 	margin-right: 10px;
-	outline: 1px solid; /* Temporär för att se layouten när vi kodar */
+/*	outline: 1px solid; Temporär för att se layouten när vi kodar             */
 }
 
 .subpage .hwrap > h1,
@@ -224,7 +224,61 @@ Regler för tabeller
 ================================================================================
 */
 
-/* TODO Avsnitt 12.3 */
+table {
+  border-spacing: 0;
+  border: 1px solid #d3d3d3;
+  width: 96%;
+  margin: 1em auto 2em;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+thead {
+  font-size: 150%;
+  text-shadow: #fff 1px 1px 1px;
+}
+
+th, td {
+  padding: 1.1rem 1.8rem 1.1rem;
+}
+
+th {
+    padding-top: 1.4rem;
+    background: #ddd;
+    text-align: left;
+}
+
+td {
+  border-top: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  /* Inte runtom, eftersom vi inte vill ha dubbel bredd */
+}
+
+th:not(:last-child) {
+    border-right: 1px solid #f2f2f2;
+}
+
+tr:target {
+    background-color: #61d7a4;
+}
+
+tr:hover {
+    background-color: #ff9b73;
+}
+
+tr {
+    transition: background-color 1s;
+}
+
+td:nth-child(1) {
+    /* Första kolumnen */
+    width: 50px;
+}
+
+td:nth-child(2) {
+    /* Andra kolumnen */
+    width: 50px;
+}
 
 /*
 ================================================================================
