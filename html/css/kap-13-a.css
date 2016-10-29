@@ -1,26 +1,33 @@
 @charset "utf-8";
+/* Inloggningsformulärets CSS-kod  Uppgift 13A                                
+   Fil:    kap-13-a.css
+   Ändrad: 2016-10-29
+   Av:     Niklas Engvall
+*/
 
-/* Inloggningsformulärets CSS-kod  Uppgift 13A                                */
 body {
-    font-family: "Merienda One"; /* Länkar fonten i HTML-filen                */
+    font-family: "Merienda One"; /* Fonten som länkas in via HTML-filen       */
 }
 
 
+/* Ettiketter i HTML-formulär                                                 */
 label {
-  display: block; /* Ändrade från inline-block                                */
-  text-align: left;
-  width: 120px;
-  font-size: 90%;
+  display: block; /* Ändradt från inline-block => att label står ensam på rad */
+  text-align: left; /* Texten ska vara vänsterjusterad                        */
+  width: 120px;     /* Bredden på labelobjektet                               */
+  font-size: 80%;   /* Fonten skall vara 80 % stor i förh. till föräldern     */   
 
 }
 
+/* Skicka knappen i HTML-formulär                                             */
 input[type="submit"] {
-    margin-left: 74px;
+    margin-left: 74px; /* Ändrade detta, jag tyckte att 134px inte var snyggt */
 
 }
 
+/* Inmatningsrutorna för användarnamn och lösenord i HTML-formuläret          */
 input[type=text],
 input[type=password] {
-    background-color: #ddd;
+    background-color: #eee;
 }
 

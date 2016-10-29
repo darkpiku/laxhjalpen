@@ -12,9 +12,15 @@
 		      rel="stylesheet" />
 	  <!-- Ladda in extern stilmall                                            -->
 		<link rel="stylesheet" href="css/laxhjalpen.css" />
+    <!-- Avsnitt 14.7.3                                                      -->
+    <link rel="stylesheet" href="css/nivo-slider.css" media="screen" />
+    <link rel="stylesheet" href="css/themes/default/default.css" 
+          media="screen" />
+    
     <!-- Tala om att renderingen av html-koden ska vara anpassad för MS Edge -->
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- 7.10.3 -->
-	</head>
+	  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- 7.10.3      -->
+  </head>
   <!-- Sidans kropp för webbplatsens undersidor                              -->			
   <body class="subpage">
     <!-- Sidhuvudet                                                          -->
@@ -35,8 +41,27 @@
 			<li><a href="contact.php">Kontakt&nbsp;&#x260E;</a></li>
 		</ul>
   </nav>
-	<!-- Tabell med våra tjänster och priser                                   -->
-	<div class="main">
+
+<!-- Jag koppar över denna <div> då det verkar vara fel, infogar instället 
+     slider koden i <div class="main">
+
+  <div role="main">
+  </div> 
+-->
+  <div class="main"><!-- Tabell med våra tjänster och priser                 -->  
+    <div class="blockslider theme-default">
+      <div id="slider" class="nivoSlider">
+        <a href="#lstuga"><img src="img/1.png" alt="" 
+           title="Läxstuga med dig och dina kompisar" /></a>
+        <a href="#skypeh"><img src="img/2.png" alt="" 
+           title="Hjälp via Skype" /></a>
+        <a href="#mailhp"><img src="img/3.png" alt="" 
+           title="Hjälp via email" /></a>
+        <a href="#videos"><img src="img/4.png" alt="" 
+           title="Vi har också videolektioner" /></a>
+      </div>
+    </div>
+
     <table>
       <thead>
         <tr>
@@ -67,5 +92,9 @@
     <!-- Sidfoten                                                            -->
     <footer>
     </footer>
+  <!-- Infoga JQuery                                                         --> 
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="scripts/jquery.nivo.slider.pack.js"></script>
+  <script>$('#slider').nivoSlider();</script>
   </body>
 </html>
