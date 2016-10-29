@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* Inloggningsformulärets CSS-kod  Uppgift 13A                                */
+body {
+    font-family: "Merienda One"; /* Länkar fonten i HTML-filen                */
+}
+
+
+label {
+  display: block; /* Ändrade från inline-block                                */
+  text-align: left;
+  width: 120px;
+  font-size: 90%;
+
+}
+
+input[type="submit"] {
+    margin-left: 74px;
+
+}
+
+input[type=text],
+input[type=password] {
+    background-color: #ddd;
+}
+

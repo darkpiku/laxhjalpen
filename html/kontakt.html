@@ -1,0 +1,70 @@
+<!doctype html>
+<!-- Tala om av vi använder svensk text härifrån och frammåt på sidan        -->
+<html lang="sv">
+  <!-- Sidans osynliga huvud för meta-, title- och link-taggar               -->
+  <head>
+    <!-- Vi använder teckentabell utf-8                                      -->
+		<meta charset="utf-8" />
+		<!-- Sidans titel                                                        -->
+		<title>Kontakt - Läxhjälpen</title>
+		<!-- Använd teckensnittet Merienda One från Google Fonts i rubriker      -->
+		<link href="https://fonts.googleapis.com/css?family=Merienda+One" 
+		      rel="stylesheet" />
+	  <!-- Ladda in extern stilmall                                            -->
+		<link rel="stylesheet" href="css/laxhjalpen.css" />
+    <!-- Tala om att renderingen av html-koden ska vara anpassad för MS Edge -->
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- 7.10.3 -->
+	</head>	
+  <!-- Sidans kropp för webbplatsens undersidor                              -->
+  <body class="subpage">
+    <!-- Sidhuvudet                                                        -->
+    <header>
+      <div class="hwrap">
+        <a href="./"><img class="logo" alt="Startsidan" src="img/laxlogo.png" />
+        </a>
+        <h1>Läxhjälpen: <span>Kontakt </span></h1>
+      </div>
+      <p class="tagline"></p>
+    </header>
+    <div class="main">
+      <h2>Kontaktformulär</h2>
+      <form action="contact.php" method="post"></form>
+        <fieldset>
+          <legend>Vem är du?</legend>
+          <p>
+            <label for="uname">Namn:</label>
+            <label for="uname" class="reqfield"><strong class="required" title="Obligatorisk uppgift">*</strong></label>
+            <input type="text" name="uname" id="uname" required placeholder="Förnamn Efternamn" />
+          </p>
+          <p>
+            <label for="umail">Mejladress:</label>
+            <label for="umail" class="reqfield"><strong class="required" title="Obligatorisk uppgift">*</strong></label>
+            <input type="email" name="umail" id="umail" required placeholder="foo@bar.com" />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Meddelande</legend>
+          <!-- p med ärende (name="msubject") liknar p mmed namn ovan        -->
+          <p>
+            <label for="mmessage">Text:</label>
+            <label for="mmessage" class="reqfield"><strong class="required" title="Obligatorisk uppgift">*</strong></label>
+            <textarea id="mmessage" name="mmessage" required placeholder="Skriv ditt meddelande. Minst 25 tecken."></textarea>
+          </p>
+        </fieldset>  
+        <fieldset>
+          <p>
+            <input value="skicka" type="submit" />
+          </p>
+          <!--
+            The following field is used to prevent multiple submits.
+            If removed it will be consider a configuration error.
+          -->
+          <input name="prevent_multiple_submits" value="{$random_string}" 
+                 type="hidden" />
+        </fieldset>
+      </form>
+    </div>
+    <footer>
+    </footer>
+  </body>
+</html>

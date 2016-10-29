@@ -1,4 +1,9 @@
 <!doctype html>
+<!-- Uppgift 13A
+     Fil:    kap-13-a.html
+     Ändrad: 2016-10-29
+     Av:     Niklas Engvall
+-->     
 <!-- Tala om av vi använder svensk text härifrån och frammåt på sidan        -->
 <html lang="sv">
   <!-- Sidans osynliga huvud för meta-, title- och link-taggar               -->
@@ -11,36 +16,31 @@
 		<link href="https://fonts.googleapis.com/css?family=Merienda+One" 
 		      rel="stylesheet" />
 	  <!-- Ladda in extern stilmall                                            -->
-		<link rel="stylesheet" href="css/laxhjalpen.css" />
+		<link rel="stylesheet" href="css/kap-13-a.css" />
     <!-- Tala om att renderingen av html-koden ska vara anpassad för MS Edge -->
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- 7.10.3 -->
 	</head>
   <!-- Sidans kropp för webbplatsens undersidor                              -->			
-  <body class="subpage">
+  <body>
     <!-- Sidhuvudet                                                          -->
     <header>
-      <div class="hwrap">
-        <a href="./"><img class="logo" alt="Startsidan" src="img/laxlogo.png" />
-        </a>
-        <h1>Läxhjälpen: <span>Logga in</span></h1>
-      </div>
-      <p class="tagline"></p>
     </header>
   	<div class="main">
+      <!-- Här börjar uppgift 13A                                            -->
       <form action="login.php" method="post">
         <p>
           <label for="un">Användarnamn:</label>
-          <input name="username" id="un" required />
-        </p>
+          <input name="username" type="text" id="un" required /></p>
         <p>
           <label for="pw">Lösenord:</label>
           <input name="password" type="password" id="pw" required />
         </p>
         <p>
-          <input type="submit" value="Logga in"
+          <input type="submit" value="Logga in" />
         </p>
         
       </form>
+      <!-- Här slutar uppgift 13A                                            -->
     </div>
     <!-- Sidfoten                                                            -->
     <footer>
