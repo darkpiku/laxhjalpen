@@ -14,19 +14,19 @@ html {
 }
 body {
     margin: auto;            /* Centrera sidan                                */
-    max-width: 860px;        /*                                               */
-	/* Ändrad rad - radbruten av utrymmesskäl                                 */
-	font-family: "Helvetica Neue",
-	             "Liberation Sans", Calibri, Arial, sans-serif;
-	font-size: 100%;         /* Startvärde                                    */
+    max-width: 860px;        /* Maximal vidd på sidans kropp                  */
+    /* Ändrad rad - radbruten av utrymmesskäl                                 */
+    font-family: "Helvetica Neue",
+                "Liberation Sans", Calibri, Arial, sans-serif;
+    font-size: 100%;         /* Startvärde                                    */
 }
 
 h1 {
-	font-family: "Merienda One", cursive;
+    font-family: "Merienda One", cursive;
 }
 
 h1::first-letter {
-	color: #00AF64;
+    color: #00AF64;
 }
 /*
 ================================================================================
@@ -35,42 +35,42 @@ h1::first-letter {
 */
 
 .dborder {
-	border: 1px solid #ccc;
-	padding: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
 article {
-	padding-bottom: 1em; /* sista p elementet ska ha 1 em luft i botten       */
-	margin-bottom: 2em; 
-	border-bottom: 3px double #00AF64;
+    padding-bottom: 1em; /* sista p elementet ska ha 1 em luft i botten       */
+    margin-bottom: 2em; 
+    border-bottom: 3px double #00AF64;
 }
 
 article:last-child {
-	border-bottom: none;
-	margin-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
 article p {
-	margin-left: 140px;
-	hyphens: auto;
+    margin-left: 140px;
+    hyphens: auto;
 }
 
 figure {
-	float: left; /* Bilden till vänster om texten                             */
-	margin: 0;   /* Nollställ webbläsarens inbyggda stil                      */
+    float: left; /* Bilden till vänster om texten                             */
+    margin: 0;   /* Nollställ webbläsarens inbyggda stil                      */
 }
 
 figure img {
-	width: 128px;
-	height: 128px;
+    width: 128px;
+    height: 128px;
 }
 
 figcaption {
-	font: italic bolder 110% sans-serif;
-	font-family: inherit; /* Restore after shorthand */
-	text-align: center;
-	text-transform: uppercase;
-	color: #666;
+    font: italic bolder 110% sans-serif;
+    font-family: inherit; /* Restore after shorthand */
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
 }
 /*
 ================================================================================
@@ -86,11 +86,17 @@ Regler för sidfoten
 ================================================================================
 */
 footer {
-	margin-top: 3em;
-	text-align: center;
-	color: #999;
+    margin-top: 3em;
+    text-align: center;
+    color: #999;
 }
 
+/* Tillägg av Niklas Engvall
+   Sidhuvudet och sidfoten ska ta 100 % av bredden                            */
+header, footer {
+    display: block;       
+}
+ 
 /*
 ================================================================================
 Huvudsajt - navigering
@@ -101,36 +107,36 @@ Huvudsajt - navigering
 /* TODO Avsnitt 5.2, 5.4, 5.5, 5.6, 11.4.2 */
 .menu > li,
 .menu > h2 {
-	margin: 0 0 1em;
-	padding: 2em 0;
-	background-color: #F5F5F5; /* Mycket ljusgrå                              */
-	text-align: center;
-	/* Nya rader i befintlig regel                                            */
-	box-shadow: inset 0 0 20px #007241;
-	border-radius: 50%;
-	font-family: "Merienda One", cursive;	
+    margin: 0 0 1em;
+    padding: 2em 0;
+    background-color: #F5F5F5; /* Mycket ljusgrå                              */
+    text-align: center;
+    /* Nya rader i befintlig regel                                            */
+    box-shadow: inset 0 0 20px #007241;
+    border-radius: 50%;
+    font-family: "Merienda One", cursive;	 
 }
 
 .menu a:link,
 .menu a:visited {
-	text-decoration: none;
-	color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 .menu a:focus,
 .menu a:hover {
-	text-decoration: underline;
-	color: #A62F00;
+    text-decoration: underline;
+    color: #A62F00;
 }
 
 .menu a:active {
-	text-decoration: underline;
-	color: #FF4900;
+    text-decoration: underline;
+    color: #FF4900;
 }
 
 .menu {
-	margin: 1em 0;
-	padding: 0;
+    margin: 1em 0;
+    padding: 0;
 }
 
 .startpage > section > h2, 
@@ -155,11 +161,11 @@ Regler för startsidan
 /* Vi ser till att <header> och <footer> alltid fyller sidans bredd           */
 .startpage header,
 .startpage footer {
-	flex: 0 0 100%;
+    flex: 0 0 100%;
 }
 /* Därefter låter vi våra fyra <section> lägga sig på rad efter varandra      */
 .startpage section {
-	flex: 0 0 22%;
+    flex: 0 0 22%;
 }
 
 .startpage h1 {
@@ -191,6 +197,19 @@ Andra regler för undersidor
 ================================================================================
 */
 
+/* CSS för om-oss-sidan                                                       */
+.subpage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Vi ser till att <header> och <footer> alltid fyller sidans bredd           */
+.subpage header,
+.subpage footer {
+    flex: 0 0 100%;
+}
+/* Regler för bild och rubrik                                                 */
 .subpage .logo { /* Måste felmeddela IT-pastorn,  han skrev .Logo och det gack icke */
 	width: 146px;
 	height: 123px;
@@ -215,7 +234,6 @@ nav {
 	flex: 0 1 20%;
 	min-width: 146px;
 	margin-right: 10px;
-/*	outline: 1px solid; Temporär för att se layouten när vi kodar             */
 }
 
 .subpage .hwrap > h1,
@@ -386,8 +404,15 @@ Regler för adaptiv design
     .hwrap > a {
         margin-right: 30px;
     }
+
+/* Tillägg av Niklas Engvall för att kolumnerna ska visas ok                  */
+div[role=main] {
+            flex-direction: column;
+}
+
     /* Lägg till regler enligt kapitel 15 */
 }
 
 /* TODO Avsnitt 15.4.2 + arbetsboken */
+
 
